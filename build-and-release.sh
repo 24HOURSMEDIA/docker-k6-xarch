@@ -10,7 +10,7 @@ then
   exit 1
 fi
 
-DOCKER_REPOSITORY=24hoursmedia/k6loadtest
+DOCKER_REPOSITORY=24hoursmedia/k6-xarch
 DOCKER_VERSIONPREFIX=${2}
 
 (
@@ -20,5 +20,4 @@ DOCKER_VERSIONPREFIX=${2}
 
 PLATFORM=linux/arm64,linux/arm/v7,linux/amd64,linux/386
 docker buildx create --use --node t4k6builder
-docker buildx build  --push --platform=${PLATFORM} --tag ${DOCKER_REPOSITORY}:${DOCKER_VERSIONPREFIX}latest .
 docker buildx build  --push --platform=${PLATFORM} --tag ${DOCKER_REPOSITORY}:${DOCKER_VERSIONPREFIX}${K6VERSION} .
