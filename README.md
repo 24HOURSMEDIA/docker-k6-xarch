@@ -7,6 +7,11 @@ Docker images published on https://hub.docker.com/repository/docker/24hoursmedia
 Github repository https://github.com/24HOURSMEDIA/docker-k6-xarch  
 K6 source repository: https://github.com/k6io/k6
 
+We succesfully ran the docker k6-grafana-influxdb example from
+the K6 docs on a Raspberry Pi 4 with Ubuntu Server 20.04LTS 64bit arm.
+The example with the slightly modified docker-compose file can be
+found in the [examples](examples).
+
 
 ##  Build and publish a release
 
